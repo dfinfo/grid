@@ -6,7 +6,7 @@
 
 namespace Dfinfo\Grid;
 
-use Dfinfo\Gcaue\BaseBundle\Entity\Traits\LookupTrait;
+use Dfinfo\Entity\Lookup\LookupTrait;
 
 class HeaderFromLookupFactory implements HeaderFactory
 {
