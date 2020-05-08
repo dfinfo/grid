@@ -13,6 +13,14 @@ class DataSet implements \Iterator
      */
     protected $datas = [];
     /**
+     * @var string
+     */
+    protected $unite;
+    /**
+     * @var string
+     */
+    protected $uniteShort;
+    /**
      * @var int
      */
     protected $iteratorPosition;
@@ -100,6 +108,38 @@ class DataSet implements \Iterator
         }
 
         return $result;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnite(): string
+    {
+        return $this->unite;
+    }
+
+    /**
+     * @param string $unite
+     */
+    public function setUnite(string $unite): void
+    {
+        $this->unite = $unite;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUniteShort(): string
+    {
+        return $this->uniteShort ?? substr($this->unite, 0, 1);
+    }
+
+    /**
+     * @param string $uniteShort
+     */
+    public function setUniteShort(string $uniteShort): void
+    {
+        $this->uniteShort = $uniteShort;
     }
 
     public function __construct() {
