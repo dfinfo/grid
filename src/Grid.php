@@ -6,6 +6,8 @@
 
 namespace Dfinfo\Grid;
 
+use Exception;
+
 class Grid
 {
     /**
@@ -29,7 +31,7 @@ class Grid
      * @param $id
      *
      * @return Header
-     * @throws \Exception
+     * @throws Exception
      */
     public function findHeaderFromRow($id): Header
     {
@@ -39,7 +41,7 @@ class Grid
      * @param $id
      *
      * @return Header
-     * @throws \Exception
+     * @throws Exception
      */
     public function findHeaderFromLevel1Column($id): Header
     {
@@ -49,7 +51,7 @@ class Grid
      * @param $id
      *
      * @return Header
-     * @throws \Exception
+     * @throws Exception
      */
     public function findHeaderFromLevel2Column($id): Header
     {
@@ -59,7 +61,7 @@ class Grid
      * @param $id
      *
      * @return Header
-     * @throws \Exception
+     * @throws Exception
      */
     public function findHeaderFromLevel3Column($id): Header
     {
@@ -71,7 +73,7 @@ class Grid
      * @param string $headerGroup
      *
      * @return Header
-     * @throws \Exception
+     * @throws Exception
      */
     protected function findHeader($id, string $headerGroup): Header
     {
@@ -81,7 +83,7 @@ class Grid
             }
         }
 
-        throw new \Exception('Header not found : ' . $id);
+        throw new Exception('Header not found : id ' . $id . ', headerGroup ' . $headerGroup);
     }
 
     /**
